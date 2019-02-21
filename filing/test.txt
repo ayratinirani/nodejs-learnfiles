@@ -1,0 +1,6 @@
+No internet
+Try:
+
+Checking the network cables, modem, and router
+Reconnecting to Wi-Fi
+DNS_PROBE_FINISHED_NO_INTERNET
