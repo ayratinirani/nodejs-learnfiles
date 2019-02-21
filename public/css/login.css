@@ -2,5 +2,22 @@ p{
     color: brown;
 }
 body{
-    background-color: black;
+    padding: 0px;
+    margin: 0px;
+
+    background-color: beige;
+}
+.main{
+    background-color: #e8fff4;
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+}
+input{
+width: 60%;
+}
+button{
+    font-size: large;
+    width: 50%;
+    height: 30px;
 }
