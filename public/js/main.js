@@ -57,13 +57,12 @@ $("#sendcomment").click(function () {
     });
 
 function getcomments() {
-    $.post("/get_comments",{},function (data) {
-        console.log(data);
-        for (var user in data) {
-          //  console.log("key " + comment + " has value " + data[comment]);
-            $("#all-comments").append("<p>"+user+" says     <strong>"+data[user].toString()+"</strong></p>")
-        }
-
+    $.post("/get_comments",{},function (comments) {
+        $("#all-comments").html("");
+        console.log(comments);
+        comments.forEach(function (cm,index) {
+            $("#all-comments").append("<p>"+ cm.username +" says     <strong>"+cm.message+"</strong></p>")
+        });
     });
     $("#cm").show();
 }
@@ -77,6 +76,7 @@ function  getinfo() {
         if(data['auth']){
             isauth=true;
             auth=data['auth'];
+            $("#myname").html(auth.username);
             hide_siging();
             getcomments();
         }
